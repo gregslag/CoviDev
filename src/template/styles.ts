@@ -8,13 +8,30 @@ export const Container = styled.div`
 `
 
 export const Header = styled.header`
-  height: 20vh;
-  min-height: 300px;
+  height: 15vh;
+  min-height: 250px;
+  padding: 24px;
   background: #017cba;
 `
 
+export const Navigation = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  span {
+    font-size: 14px;
+    font-weight: bold;
+  }
+`
+
+export const Title = styled.h1`
+  margin: 32px 0 0 0;
+  color: #fff;
+`
+
 export const Content = styled.main`
-  height: 80vh;
+  height: 85vh;
   margin: -100px 16px 25px;
   padding: 24px 16px;
   border-radius: 8px;
