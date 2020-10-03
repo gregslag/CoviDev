@@ -1,23 +1,68 @@
 import styled from 'styled-components'
+import { colors } from '../theme'
 
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
 
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 40px 20px;
 
-  h1 {
-    font-size: 54px;
-    color: ${props => props.theme.colors.primary};
-    margin-top: 40px;
+  & > * {
+    color: ${props => props.theme.colors.white};
   }
 
-  p {
-    margin-top: 24px;
-    font-size: 24px;
-    line-height: 32px;
+  & > button {
+    border: 1px solid ${props => props.theme.colors.white};
+    border-radius: 16px;
+    padding: 10px;
+    background: transparent;
+  }
+
+  & > a {
+    font-size: 18px;
+    text-decoration: underline;
+  }
+
+  & > p {
+    font-size: 20px;
+    line-height: 30px;
+    width: 100%;
+  }
+
+  & > :not(:last-child) {
+    margin-bottom: 30px;
+  }
+`
+
+export const CardWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > :not(:last-child) {
+    margin-right: 20px;
+  }
+`
+
+export const Card = styled.div`
+  border-radius: 8px;
+  width: 140px;
+  height: 140px;
+  background: ${({ background }) => colors[background] || colors.malachite};
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+
+  & > p {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
   }
 `

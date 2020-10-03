@@ -3,6 +3,8 @@ const baseColors = {
   mischka: "#E1E1E6",
   woodsmoke: "#121214",
   malachite: "#04D361",
+  goldDrop: "#F57C00",
+  white: "#FFFFFF"
 }
 
 const theme = {
@@ -16,3 +18,5 @@ const theme = {
 }
 
 export default theme
+const { colors } = theme
+export { colors }
