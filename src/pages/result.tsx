@@ -1,15 +1,17 @@
 import React from 'react'
 import Head from 'next/head'
-import { Main, ContainerBtn, Btn, List } from '../styles/pages/Result'
+import { Main, ContainerBtn, Btn, List, LiIcon } from '../styles/pages/Result'
 import Template from '../template'
 import Button from '../components/Button'
 import theme from '../styles/theme'
+import Router from 'next/router'
+import Virefied from '../assets/verified.svg'
 
-const Result: React.FC = (props) => {
-  // const props = {
-  //   recomendations: ["DICA 1", "DICA 2","DICA 3"],
-  //   cvv: true
-  // }
+const Result: React.FC = props => {
+
+  const goToDoctors = () => {
+    Router.push('/doctors')
+  }
 
   return (
     <Template title="Recomendações">
@@ -17,15 +19,15 @@ const Result: React.FC = (props) => {
         <Head>
           <title>Recomendações</title>
         </Head>
-        <p>Algumas dicas que selecionamos para você:</p>
+        <p><strong>Algumas dicas que selecionamos para você:</strong></p>
         <List>
-          {props.recomendations.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
+          <li><LiIcon/>Procure um profissional</li>
+          <li><LiIcon/>Elimine os meios letais</li>
+          <li><LiIcon/>Não deixe essa pessoa sozinha</li>
         </List>
         <ContainerBtn>
           {props.cvv ? <Button background="red">CVV</Button> : ''}
-          <Button background={theme.colors.primary}>Piscólogos</Button>
+          <Button onClick={() => goToDoctors()} background={theme.colors.primary}>Piscólogos</Button>
         </ContainerBtn>
       </Main>
     </Template>

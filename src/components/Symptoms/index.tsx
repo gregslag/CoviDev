@@ -13,22 +13,21 @@ const symptoms = [
   { name: 'fault', label: 'Sentimento de culpa' }
 ]
 
-const SymptomsQuestions: React.FC = () => {
-  const [checked, setChecked] = React.useState([])
+type Props = {
+  checked: string[]
+  onCheck: (name: string) => void
+}
 
-  const onCheck = (name: string) => {
-    let updatedChecked = [...checked]
-    if (checked.includes(name))
-      updatedChecked = updatedChecked.filter(c => c !== name)
-    else updatedChecked.push(name)
-    setChecked(updatedChecked)
-  }
-
-
+const SymptomsQuestions: React.FC<Props> = (props: Props) => {
   return (
     <Container>
       {symptoms.map(({ name, label }) => (
-        <Checkbox checked={checked.includes(name)} onClick={() => onCheck(name)}>{label}</Checkbox>
+        <Checkbox
+          checked={props.checked.includes(name)}
+          onClick={() => props.onCheck(name)}
+        >
+          {label}
+        </Checkbox>
       ))}
     </Container>
   )
