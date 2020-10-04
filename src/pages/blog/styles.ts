@@ -19,6 +19,7 @@ export const Card = styled.div`
 
   :hover {
     opacity: 0.8;
+    transition: opacity 0.3s;
   }
 
   img {
