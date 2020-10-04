@@ -6,6 +6,7 @@ import PersonalQuestions from '../components/Personal'
 import SymptomsQuestions from '../components/Symptoms'
 import SuicideQuestions from '../components/Suicide'
 import FormService from '../services/forms'
+import Router from 'next/router'
 
 import {
   Footer,
@@ -32,19 +33,22 @@ const Questions: React.FC = () => {
   }, [])
 
   const updateForm = async (newStep: number) => {
-    setStep(newStep)
     const updatedForm = checked.reduce(
       (acc, curr) => ({ ...acc, [curr]: true }),
       {}
     )
-    await FormService.updateForm(formId, updatedForm)
-    await FormService.finishForm(formId)
+    if (newStep === 3) {
+      await FormService.updateForm(formId, updatedForm)
+      Router.push('/result')
+    } else {
+      await FormService.updateForm(formId, updatedForm)
+      setStep(newStep)
+    }
   }
 
   let Form = SymptomsQuestions
-  if (step === 1) Form = PersonalQuestions
-  else if (step === 2) Form = SymptomsQuestions
-  else if (step === 3) Form = SuicideQuestions
+  if (step === 1) Form = SymptomsQuestions
+  else if (step === 2) Form = SuicideQuestions
 
   return (
     <Template title="Questões" step={step}>
