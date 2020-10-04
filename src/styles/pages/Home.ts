@@ -25,17 +25,31 @@ export const Content = styled.div`
     border-radius: 16px;
     padding: 10px;
     background: transparent;
+    font-family: 'Montserrat', sans-serif;
   }
 
   & > a {
-    font-size: 18px;
     text-decoration: underline;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
   }
 
   & > p {
     font-size: 20px;
     line-height: 30px;
     width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    line-height: 24px;
+    & strong {
+      font-weight: 600;
+    }
   }
 
   & > :not(:last-child) {
@@ -67,8 +81,12 @@ export const Card = styled.div`
   cursor: pointer;
 
   & > p {
+    font-family: 'Poppins', sans-serif;
     font-size: 20px;
-    font-weight: 700;
-    margin: 0;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
   }
 `

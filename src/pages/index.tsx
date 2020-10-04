@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 
 import SafiraLogo from '../assets/safira.svg'
 import Me from '../assets/me.svg'
@@ -31,7 +32,7 @@ const Home: React.FC = () => {
           </Card>
         </CardWrapper>
         <button>Sou Profissional e quero ajudar</button>
-        <a>Assuntos relacionados</a>
+        <Link href="/blog">Assuntos relacionados</Link>
       </Content>
     </Container>
   )
