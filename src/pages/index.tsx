@@ -17,19 +17,23 @@ const Home: React.FC = () => {
       <Content>
         <SafiraLogo />
         <p>
-          Seja bem-vindo.
+          Seja bem-vindo(a).
           <br />
-          <strong>O que deseja fazer?</strong>
+          <strong>Para quem seria o atendimento?</strong>
         </p>
         <CardWrapper>
-          <Card>
-            <p>Para mim</p>
-            <Me />
-          </Card>
-          <Card background="goldDrop">
-            <p>Amigo(a)</p>
-            <Someone />
-          </Card>
+          <Link href="/questions">
+            <Card>
+              <p>Para mim</p>
+              <Me />
+            </Card>
+          </Link>
+          <Link href="/questions">
+            <Card background="goldDrop">
+              <p>Amigo(a)</p>
+              <Someone />
+            </Card>
+          </Link>
         </CardWrapper>
         <button>Sou Profissional e quero ajudar</button>
         <Link href="/blog">Assuntos relacionados</Link>

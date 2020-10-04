@@ -4,6 +4,7 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 24px 16px;
   /* height: 100%; */
   flex: 1;
 `

@@ -2,6 +2,8 @@ import React from 'react'
 import Head from 'next/head'
 import { Main, ContainerBtn, Btn, List } from '../styles/pages/Result'
 import Template from '../template'
+import Button from '../components/Button'
+import theme from '../styles/theme'
 
 const Result: React.FC = (props) => {
   // const props = {
@@ -22,8 +24,8 @@ const Result: React.FC = (props) => {
           ))}
         </List>
         <ContainerBtn>
-          {props.cvv ? <Btn>btn1</Btn> : ''}
-          <Btn>btn2</Btn>
+          {props.cvv ? <Button background="red">CVV</Button> : ''}
+          <Button background={theme.colors.primary}>Piscólogos</Button>
         </ContainerBtn>
       </Main>
     </Template>

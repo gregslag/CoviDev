@@ -37,16 +37,15 @@ export const Content = styled.div`
     line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
-
   }
 
   & > p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
     width: 100%;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
-    line-height: 24px;
+    line-height: 40px;
     & strong {
       font-weight: 600;
     }
