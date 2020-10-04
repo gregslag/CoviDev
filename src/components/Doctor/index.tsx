@@ -2,9 +2,13 @@ import React from 'react'
 
 import * as S from './styles'
 
-const Doctor: React.FC = () => {
+type Props = {
+  onClick: () => void
+}
+
+const Doctor: React.FC<Props> = (props: Props) => {
   return (
-    <S.Container onClick={() => alert('Agendar')}>
+    <S.Container onClick={props.onClick}>
       <S.Avatar
         src="https://zenklub.com.br/static/professionals/5ce2b351e66d032ea48b90d4/4c2058bd9661b850ef9976995a6ac68df0afa4f4-180x180.png"
         alt="Gabrielle Zaniolo"

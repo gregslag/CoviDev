@@ -1,12 +1,16 @@
 import React from 'react'
 import Input from '../Input'
 
-const PersonalQuestions: React.FC = () => {
+type Props = {
+  onChange: (field: string, value: string) => void;
+}
+
+const PersonalQuestions: React.FC<Props> = (props: Props) => {
   return (
     <div>
-      <Input label="Nome" name="name" />
-      <Input label="Email" name="email" />
-      <Input label="Telefone" name="phone" />
+      <Input onChange={(e) => props.onChange("name", e.target.value)} label="Nome" name="name" />
+      <Input onChange={(e) => props.onChange("email", e.target.value)} label="Email" name="email" />
+      <Input onChange={(e) => props.onChange("phone", e.target.value)} label="Telefone" name="phone" />
     </div>
   )
 }

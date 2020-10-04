@@ -4,13 +4,15 @@ import { Main, ContainerBtn, Btn, List, LiIcon } from '../styles/pages/Result'
 import Template from '../template'
 import Button from '../components/Button'
 import theme from '../styles/theme'
-import Router from 'next/router'
+import Router, { useRouter } from 'next/router'
 import Virefied from '../assets/verified.svg'
 
 const Result: React.FC = props => {
+  const router = useRouter()
+  const { formId } = router.query
 
   const goToDoctors = () => {
-    Router.push('/doctors')
+    Router.push({ pathname: '/doctors', query: { formId } })
   }
 
   return (
@@ -19,15 +21,31 @@ const Result: React.FC = props => {
         <Head>
           <title>Recomendações</title>
         </Head>
-        <p><strong>Algumas dicas que selecionamos para você:</strong></p>
+        <p>
+          <strong>Algumas dicas que selecionamos para você:</strong>
+        </p>
         <List>
-          <li><LiIcon/>Procure um profissional</li>
-          <li><LiIcon/>Elimine os meios letais</li>
-          <li><LiIcon/>Não deixe essa pessoa sozinha</li>
+          <li>
+            <LiIcon />
+            Procure um profissional
+          </li>
+          <li>
+            <LiIcon />
+            Elimine os meios letais
+          </li>
+          <li>
+            <LiIcon />
+            Não deixe essa pessoa sozinha
+          </li>
         </List>
         <ContainerBtn>
           {props.cvv ? <Button background="red">CVV</Button> : ''}
-          <Button onClick={() => goToDoctors()} background={theme.colors.primary}>Piscólogos</Button>
+          <Button
+            onClick={() => goToDoctors()}
+            background={theme.colors.primary}
+          >
+            Piscólogos
+          </Button>
         </ContainerBtn>
       </Main>
     </Template>

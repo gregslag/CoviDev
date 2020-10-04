@@ -15,11 +15,15 @@ class FormsService {
   }
 
   static async finishForm(id: string): Promise<void> {
-    await emailjs.send('safiramail', 'template_bda22jo', {
-      from_name: 'gabriel',
-      to_name: 'manuel',
-      message: 'gesiel é o cara'
-    })
+    const doc = await database.collection('forms').doc(id).get()
+    const data = doc.data()
+    const { name, email, ...rest } = data
+
+    // await emailjs.send('safiramail', 'template_bda22jo', {
+    //   from_name: 'gabriel',
+    //   to_name: 'manuel',
+    //   message: 'gesiel é o cara'
+    // })
   }
 }
 
