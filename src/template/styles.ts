@@ -49,10 +49,10 @@ export const Title = styled.h1`
 export const Content = styled.main`
   height: 85vh;
   margin: -100px 16px 25px;
-  padding: 24px 16px;
   border-radius: 8px;
   border: 1px solid #e6e6f0;
   background: #fff;
-
+  display: flex;
   overflow: scroll;
+  flex-direction: column;
 `
