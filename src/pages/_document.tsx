@@ -9,6 +9,8 @@ import Document, {
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
+import Favicon from '../assets/favicon.png';
+
 export default class MyDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext
@@ -57,7 +59,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <link rel="icon" href="https://rocketseat.com.br/favicon.ico" />
+          <link rel="icon" href={Favicon} />
         </Head>
         <body>
           <Main />

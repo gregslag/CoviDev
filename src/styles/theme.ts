@@ -4,7 +4,9 @@ const baseColors = {
   woodsmoke: '#121214',
   malachite: '#04D361',
   lightGray: '#FAFAFC',
-  gray: 'rgba(0, 0, 0, 0.4)'
+  gray: 'rgba(0, 0, 0, 0.4)',
+  goldDrop: "#F57C00",
+  white: "#FFFFFF"
 }
 
 const theme = {
@@ -19,3 +21,5 @@ const theme = {
 }
 
 export default theme
+const { colors } = theme
+export { colors }
