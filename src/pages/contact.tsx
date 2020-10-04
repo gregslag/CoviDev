@@ -1,14 +1,14 @@
 import React, { useCallback, useState } from 'react'
 
-import Template from '../../template'
+import Template from '../template'
 
-import PersonalQuestions from '../../components/Personal'
-import Button from '../../components/Button'
+import PersonalQuestions from '../components/Personal'
+import Button from '../components/Button'
 
-import * as S from './styles'
-import theme from '../../styles/theme'
+import * as S from '../styles/pages/Contact'
+import theme from '../styles/theme'
 import Router, { useRouter } from 'next/router'
-import FormsService from '../../services/forms'
+import FormsService from '../services/forms'
 
 const Contact: React.FC = () => {
   const [formValues, setFormValues] = React.useState({})
