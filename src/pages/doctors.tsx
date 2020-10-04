@@ -49,10 +49,10 @@ const Doctors: React.FC = () => {
     }
   ]
 
-  const onClick = () => {
+  const onClick = (doctorName: string) => {
     Router.push({
       pathname: '/contact',
-      query: { formId }
+      query: { formId, doctorName }
     })
   }
 
@@ -60,7 +60,11 @@ const Doctors: React.FC = () => {
     <Template title="Profissionais">
       <S.Container>
         {doctors.map(doctor => (
-          <Doctor key={doctor.id} doctor={doctor} onClick={onClick} />
+          <Doctor
+            key={doctor.id}
+            doctor={doctor}
+            onClick={() => onClick(doctor.name)}
+          />
         ))}
       </S.Container>
     </Template>

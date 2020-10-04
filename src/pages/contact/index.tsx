@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
   const [formValues, setFormValues] = React.useState({})
 
   const router = useRouter()
-  const { formId } = router.query
+  const { formId, doctorName } = router.query
 
   const onChange = (field: string, value: string): void => {
     setFormValues({ ...formValues, [field]: value })
@@ -22,14 +22,14 @@ const Contact: React.FC = () => {
 
   const finishContact = async () => {
     await FormsService.updateForm(formId as string, formValues)
-    await FormsService.finishForm(formId as string, 'Dra. Gabrielle Zaniolo')
+    await FormsService.finishForm(formId as string, doctorName as string)
     Router.push('/success')
   }
 
   return (
     <Template title="Contato">
       <S.Container>
-        <p>Contatar Dra. Gabrielle Zaniolo</p>
+        <p>Contatar {doctorName}</p>
         <PersonalQuestions onChange={onChange} />
         <S.Actions>
           <Button onClick={finishContact} background={theme.colors.primary}>
