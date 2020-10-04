@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
-import { Main, ContainerBtn, Btn, List } from './style'
-import Template from '../../template'
+import { Main, ContainerBtn, Btn, List } from '../styles/pages/Result'
+import Template from '../template'
 
 const Result: React.FC = (props) => {
   // const props = {
