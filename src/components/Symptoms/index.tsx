@@ -2,7 +2,7 @@ import { Container } from './styles'
 import React from 'react'
 import Checkbox from '../Checkbox'
 
-const symptoms = [
+export const symptoms = [
   { name: 'pleasure', label: 'Perda de prazer e interesse' },
   { name: 'irritability', label: 'Irritabilidade' },
   { name: 'indecision', label: 'Falta de concentração' },

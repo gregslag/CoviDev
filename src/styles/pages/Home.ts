@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { colors } from '../theme'
 
 export const Container = styled.div`
-  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -37,6 +36,7 @@ export const Content = styled.div`
     line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
+    margin-top: 0 !important;
   }
 
   & > p {
@@ -56,9 +56,9 @@ export const Content = styled.div`
     margin-bottom: 30px;
   }
 
-  & > a {
-    margin-top: 30px
-  }
+  /* & > a {
+    margin-top: 30px;
+  } */
 `
 
 export const CardWrapper = styled.div`

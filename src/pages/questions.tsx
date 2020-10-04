@@ -39,7 +39,10 @@ const Questions: React.FC = () => {
     )
     if (newStep === 3) {
       await FormService.updateForm(formId, updatedForm)
-      Router.push('/result')
+      Router.push({
+        pathname: '/result',
+        query: { formId: formId }
+      })
     } else {
       await FormService.updateForm(formId, updatedForm)
       setStep(newStep)
