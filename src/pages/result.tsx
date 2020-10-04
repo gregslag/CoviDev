@@ -39,12 +39,18 @@ const Result: React.FC = props => {
           </li>
         </List>
         <ContainerBtn>
-          {props.cvv ? <Button background="red">CVV</Button> : ''}
+          {/* {props.cvv ? <Button background="red">CVV</Button> : ''} */}
           <Button
             onClick={() => goToDoctors()}
             background={theme.colors.primary}
+            style={{
+              background: 'transparent',
+              border: `1px solid ${theme.colors.primary}`,
+              color: theme.colors.primary,
+              width: '100%'
+            }}
           >
-            Piscólogos
+            Conhecer profissionais
           </Button>
         </ContainerBtn>
       </Main>

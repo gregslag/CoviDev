@@ -36,7 +36,23 @@ const Home: React.FC = () => {
           </Link>
         </CardWrapper>
         <button>Sou Profissional e quero ajudar</button>
-        <Link href="/blog">Assuntos relacionados</Link>
+        <Link href="/blog">Blog</Link>
+        <a href="https://www.cvv.org.br/" target="_blank">
+          Preciso conversar com alguém
+        </a>
+
+        {/* <Button
+            onClick={() => goToDoctors()}
+            background={theme.colors.primary}
+            style={{
+              background: 'transparent',
+              border: `1px solid ${theme.colors.primary}`,
+              color: theme.colors.primary,
+              width: '100%'
+            }}
+          >
+            Conhecer profissionais
+          </Button> */}
       </Content>
     </Container>
   )
