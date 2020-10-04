@@ -38,6 +38,7 @@ const Questions: React.FC = () => {
       {}
     )
     await FormService.updateForm(formId, updatedForm)
+    await FormService.finishForm(formId)
   }
 
   let Form = SymptomsQuestions
