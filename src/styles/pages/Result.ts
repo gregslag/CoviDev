@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Verified from '../../assets/check.svg'
 
 export const Main = styled.div`
   background: #fff;
@@ -12,9 +13,19 @@ export const List = styled.ul`
   width: 100%;
   list-style: none;
 
+
   li{
     margin: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
   }
+`
+
+export const LiIcon = styled(Verified)`
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
 `
 
 export const ContainerBtn = styled.div`
