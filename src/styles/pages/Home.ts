@@ -46,6 +46,7 @@ export const Content = styled.div`
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     line-height: 40px;
+    margin-top: 20px;
     & strong {
       font-weight: 600;
     }
@@ -53,6 +54,10 @@ export const Content = styled.div`
 
   & > :not(:last-child) {
     margin-bottom: 30px;
+  }
+
+  & > a {
+    margin-top: 30px
   }
 `
 
