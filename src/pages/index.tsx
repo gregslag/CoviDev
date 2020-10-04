@@ -17,9 +17,9 @@ const Home: React.FC = () => {
       <Content>
         <SafiraLogo />
         <p>
-          Seja bem-vindo.
+          Seja bem-vindo(a).
           <br />
-          <strong>O que deseja fazer?</strong>
+          <strong>Para quem seria o atendimento?</strong>
         </p>
         <CardWrapper>
           <Card>
