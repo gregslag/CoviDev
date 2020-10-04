@@ -19,12 +19,13 @@ export const Card = styled.div`
 
   :hover {
     opacity: 0.8;
+    transition: opacity 0.3s;
   }
 
   img {
     border-radius: 10px;
     height: 86px;
-    width: 90px;
+    width: 85px;
     margin-right: 20px;
   }
 
@@ -38,7 +39,7 @@ export const Card = styled.div`
       font-family: 'Poppins', sans-serif;
       font-style: normal;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 12px;
       line-height: 24px;
       /* or 171% */
 

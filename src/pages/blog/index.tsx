@@ -37,10 +37,7 @@ const blog: React.FC = () => {
           <img src={terceiroBlog} />
           <div>
             <h3>Esgotamento Psicológico</h3>
-            <p>
-              O esgotamento psicológico é a sensação de exaustão mental e
-              física...
-            </p>
+            <p>O esgotamento psicológico é a sensação de exaustão mental...</p>
             <a href="https://www.vittude.com/blog/o-que-causa-esgotamento-psicologico/">
               Ler mais...
             </a>
@@ -50,10 +47,7 @@ const blog: React.FC = () => {
           <img src={quartoBlog} />
           <div>
             <h3>Fim do isolamento</h3>
-            <p>
-              A maioria das pessoas já deve ter se perguntado quando acaba a
-              quarentena...
-            </p>
+            <p>A maioria das pessoas já deve ter se perguntado...</p>
             <a
               href={
                 'https://www.vittude.com/blog/quando-acaba-a-quarentena-dicas-para-se-preparar/'
