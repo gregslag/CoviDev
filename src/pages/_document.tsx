@@ -9,7 +9,7 @@ import Document, {
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
-import Favicon from "../assets/favicon.png";
+import Favicon from '../assets/favicon.png';
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -47,6 +47,15 @@ export default class MyDocument extends Document {
 
           <link
             href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
+            rel="stylesheet"
+          />
+
+          <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,500&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:ital,wght@0,400;0,600;1,500&display=swap"
             rel="stylesheet"
           />
 
