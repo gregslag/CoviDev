@@ -1,12 +1,12 @@
 import React from 'react'
 import Router from 'next/router'
 
-import theme from '../../styles/theme'
-import Template from '../../template'
+import theme from '../styles/theme'
+import Template from '../template'
 
-import Button from '../../components/Button'
+import Button from '../components/Button'
 
-import * as S from './styles'
+import * as S from '../styles/pages/Success'
 
 import CircularCheck from '../../assets/circularCheck.png'
 
