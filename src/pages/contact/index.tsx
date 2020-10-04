@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
 
   const finishContact = async () => {
     await FormsService.updateForm(formId as string, formValues)
-    await FormsService.finishForm(formId as string)
+    await FormsService.finishForm(formId as string, 'Dra. Gabrielle Zaniolo')
     Router.push('/success')
   }
 

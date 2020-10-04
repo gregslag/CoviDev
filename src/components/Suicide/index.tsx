@@ -2,7 +2,7 @@ import React from 'react'
 import Checkbox from '../Checkbox'
 import { CheckboxContainer } from './styles'
 
-const questions = [
+export const questions = [
   { name: 'goodbye', label: 'Se despedir' },
   { name: 'sell', label: 'Vender coisas' },
   { name: 'humor', label: 'Melhora brusca de humor' },
