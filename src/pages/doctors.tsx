@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Template from '../../template'
-import Doctor from '../../components/Doctor'
+import Template from '../template'
+import Doctor from '../components/Doctor'
 
-import * as S from './styles'
+import * as S from '../styles/pages/Doctors'
 
 const Doctors: React.FC = () => {
   return (
