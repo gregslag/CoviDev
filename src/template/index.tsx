@@ -22,7 +22,7 @@ const Template: React.FC<Props> = ({ title, step, children }) => {
         </S.Navigation>
         <S.TitleContainer>
           <S.Title>{title}</S.Title>
-          {step && <span>{step} de 3</span>}
+          {step && <span>{step} de 2</span>}
         </S.TitleContainer>
       </S.Header>
       <S.Content>{children}</S.Content>
