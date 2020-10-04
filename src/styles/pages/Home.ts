@@ -4,11 +4,17 @@ import { colors } from '../theme'
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
 
+export const Content = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 40px 20px;
+  padding: 40px 0px;
+  width: max-content;
 
   & > * {
     color: ${props => props.theme.colors.white};
