@@ -53,4 +53,6 @@ export const Content = styled.main`
   border-radius: 8px;
   border: 1px solid #e6e6f0;
   background: #fff;
+
+  overflow: scroll;
 `
