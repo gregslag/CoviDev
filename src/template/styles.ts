@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+type StepProps = {
+  step?: number
+}
+
 export const Container = styled.div`
   height: 100vh;
   display: flex;
@@ -25,8 +29,20 @@ export const Navigation = styled.div`
   }
 `
 
+export const TitleContainer = styled.div`
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  span {
+    font-size: 16px;
+    font-weight: bold;
+  }
+`
+
 export const Title = styled.h1`
-  margin: 32px 0 0 0;
+  margin: 0;
   color: #fff;
 `
 
