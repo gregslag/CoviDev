@@ -1,6 +1,6 @@
 import React from 'react'
 import Checkbox from '../Checkbox'
-import {CheckboxContainer} from './styles'
+import { CheckboxContainer } from './styles'
 
 const questions = [
   { name: 'goodbye', label: 'Se despedir' },
@@ -8,28 +8,27 @@ const questions = [
   { name: 'humor', label: 'Melhora brusca de humor' },
   { name: 'interest', label: 'Falta de interesse pelo bem-estar' },
   { name: 'productivity', label: 'Queda de produtividade' },
-  { name: 'peace', label: 'Fazer as pazes com as pessoas' },
+  { name: 'peace', label: 'Fazer as pazes com as pessoas' }
 ]
 
-const SuicideQuestions: React.FC = () => {
-  const [checked, setChecked] = React.useState([])
+type Props = {
+  checked: string[]
+  onCheck: (name: string) => void
+}
 
-  const onCheck = (name: string) => {
-    let updatedChecked = [...checked]
-    if (checked.includes(name))
-      updatedChecked = updatedChecked.filter(c => c !== name)
-    else updatedChecked.push(name)
-    setChecked(updatedChecked)
-  }
-
+const SuicideQuestions: React.FC<Props> = (props: Props) => {
   return (
     <div>
       {questions.map(({ name, label }) => (
-        <CheckboxContainer checked={checked.includes(name)} onClick={() => onCheck(name)}>{label}</CheckboxContainer>
+        <CheckboxContainer
+          checked={props.checked.includes(name)}
+          onClick={() => props.onCheck(name)}
+        >
+          {label}
+        </CheckboxContainer>
       ))}
     </div>
   )
 }
 
-
-export default SuicideQuestions;
+export default SuicideQuestions
