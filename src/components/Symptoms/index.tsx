@@ -1,6 +1,6 @@
 import { Container } from './styles'
 import React from 'react'
-import Checkbox from '../../../components/Checkbox'
+import Checkbox from '../Checkbox'
 
 const symptoms = [
   { name: 'pleasure', label: 'Perda de prazer e interesse' },

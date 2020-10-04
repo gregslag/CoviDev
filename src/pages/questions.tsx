@@ -1,12 +1,12 @@
 import React from 'react'
-import Button from '../../components/Button'
-import theme from '../../styles/theme'
-import Template from '../../template'
-import PersonalQuestions from './personal'
-import SymptomsQuestions from './symptoms'
-import SuicideQuestions from './suicide'
+import Button from '../components/Button'
+import theme from '../styles/theme'
+import Template from '../template'
+import PersonalQuestions from '../components/Personal'
+import SymptomsQuestions from '../components/Symptoms'
+import SuicideQuestions from '../components/Suicide'
 
-import { Footer, Container, FormContainer, QuestionStyled } from './styles'
+import { Footer, Container, FormContainer, QuestionStyled } from '../styles/pages/Questions'
 
 const Questions: React.FC = () => {
   const [step, setStep] = React.useState(1)
