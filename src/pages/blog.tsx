@@ -1,12 +1,12 @@
 import React from 'react'
 
-import { Container, Card } from './styles'
-import primeiroBlog from '../../assets/primeiroBlog.jpeg'
-import segundoBlog from '../../assets/segundoBlog.jpeg'
-import terceiroBlog from '../../assets/terceiroBlog.png'
-import quartoBlog from '../../assets/quartoBlog.jpeg'
+import primeiroBlog from '../assets/primeiroBlog.jpeg'
+import segundoBlog from '../assets/segundoBlog.jpeg'
+import terceiroBlog from '../assets/terceiroBlog.png'
+import quartoBlog from '../assets/quartoBlog.jpeg'
+import { Container, Card } from '../styles/pages/Blog'
 
-import Template from '../../template'
+import Template from '../template'
 
 const blog: React.FC = () => {
   return (
