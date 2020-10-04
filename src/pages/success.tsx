@@ -8,7 +8,7 @@ import Button from '../components/Button'
 
 import * as S from '../styles/pages/Success'
 
-import CircularCheck from '../../assets/circularCheck.png'
+import CircularCheck from '../assets/circularCheck.png'
 
 const Success: React.FC = () => {
   return (
